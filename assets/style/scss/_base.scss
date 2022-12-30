@@ -2,7 +2,7 @@ $color-primary: #F7C7B9;
 $color-secondary: #DA2535;
 $color-tertiary: #404040;
 $color-quartetary: #8D8D8D;
-$color-quintetary: #404040;
+$color-quintetary: #161212;
 $color-white: #F9F9F9;
 
 * {
@@ -14,23 +14,28 @@ $color-white: #F9F9F9;
 }
 
 $font: (
-    500: "Poppins-Regular.ttf",
-    600: "Poppins-Medium.ttf",
-    700: "Poppins-SemiBoldItalic.ttf"
+    normal: (
+        500: "Poppins-Regular.ttf",
+        600: "Poppins-Medium.ttf",
+    ),
+    italic: ( 700: "Poppins-SemiBoldItalic.ttf" )
 );
 
-@each $num, $nameArq in $font {
-    @font-face {
-        font-family: "Poopins";
-        src: url("../../font/#{$nameArq}");
-        font-weight: $num;
+@each $font-type, $list-font in $font {
+    @each $num, $nameArq in $list-font {
+        @font-face {
+            font-family: "Poopins";
+            src: url("../font/#{$nameArq}");
+            font-style: $font-type;
+            font-weight: $num;
+        }
     }
 }
 
 $size-fonts: (
     "html": 10px,
-    "p, a, button, input": 1.8rem, 
-    "input::placeholder": 1.8rem,
+    "p, a, button, input": 1.6rem, 
+    "input::placeholder": 1.6rem,
     "h1": 3.2rem, "h2": 2.4rem
 );
 
@@ -41,7 +46,7 @@ $size-fonts: (
 }
 
 $reponsive-size-root: (
-    1440px: 8px,
+    1440px: 9px,
     1024px: 7.3px,
     768px: 6.7px,
     650px: 6px,

@@ -1,0 +1,23 @@
+.nav {
+    padding: 2rem 0;
+    background: $color-primary;
+    
+    .container-nav {
+        @extend .flex-between;
+
+        .menu-links {
+            @extend .flex-between;
+            list-style: none;
+            gap: 5rem;
+
+            .link {
+                text-decoration: none;
+                color: $color-quintetary;
+
+                &:hover {
+                    color: $color-quartetary;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    height: 100%;
+    margin: auto;
+    width: MIN(90%, 1217px);
+}
+
+.logo {
+    @extend .flex-between;
+    font-weight: 400;
+    gap: 1.2rem;
+
+    img {
+        width: 3.5rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+}
