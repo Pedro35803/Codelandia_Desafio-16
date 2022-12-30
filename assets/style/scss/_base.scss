@@ -1,0 +1,62 @@
+$color-primary: #F7C7B9;
+$color-secondary: #DA2535;
+$color-tertiary: #404040;
+$color-quartetary: #8D8D8D;
+$color-quintetary: #404040;
+$color-white: #F9F9F9;
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+$font: (
+    500: "Poppins-Regular.ttf",
+    600: "Poppins-Medium.ttf",
+    700: "Poppins-SemiBoldItalic.ttf"
+);
+
+@each $num, $nameArq in $font {
+    @font-face {
+        font-family: "Poopins";
+        src: url("../../font/#{$nameArq}");
+        font-weight: $num;
+    }
+}
+
+$size-fonts: (
+    "html": 10px,
+    "p, a, button, input": 1.8rem, 
+    "input::placeholder": 1.8rem,
+    "h1": 3.2rem, "h2": 2.4rem
+);
+
+@each $element, $size in $size-fonts {
+    #{$element} {
+        font-size: $size;
+    }
+}
+
+$reponsive-size-root: (
+    1440px: 8px,
+    1024px: 7.3px,
+    768px: 6.7px,
+    650px: 6px,
+);
+
+@each $root-size, $size in $reponsive-size-root {
+    @media (max-width: $root-size) {
+        html {
+            font-size: $size;
+        }
+    }
+}
+
+body {
+    background: $color-white;
+    color: $color-quintetary;
+    font-family: "Poopins", sans-serif;
+}
