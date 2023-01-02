@@ -1,0 +1,55 @@
+.start, .mensage {
+    background: $color-primary;
+    padding: 6rem 0 14.6rem;
+}
+
+.container-text {
+    @extend .flex-between;
+
+    .section-text {
+        @extend .flex-column;
+        min-width: 44rem;
+        width: 44rem;
+
+        .title {
+            line-height: 5rem;
+            width: 40rem;
+        }
+
+        .paragraph {
+            margin: 2.4rem 0 4rem;
+        }
+    }
+    
+    .img {
+        max-width: 60rem;
+        min-width: 40rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-text {
+        justify-content: center;
+
+        .section-text {
+            width: 70%;
+            text-align: center;
+            align-items: center;
+
+            .title {
+                width: auto;
+            }
+        }
+
+        .img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .container-text .section-text {
+        width: 100%;
+    }
+}
