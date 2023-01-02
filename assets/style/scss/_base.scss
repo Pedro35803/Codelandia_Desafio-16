@@ -45,11 +45,14 @@ $size-fonts: (
     }
 }
 
+$win-tablet: 768px;
+$win-mobile: 650px;
+
 $reponsive-size-root: (
     1440px: 9px,
     1024px: 8px,
-    768px: 7px,
-    650px: 6px,
+    $win-tablet: 7px,
+    $win-mobile: 6px,
 );
 
 @each $root-size, $size in $reponsive-size-root {

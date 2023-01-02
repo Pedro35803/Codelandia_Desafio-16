@@ -28,7 +28,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $win-tablet) {
     .container-text {
         justify-content: center;
 
@@ -48,7 +48,7 @@
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: $win-mobile) {
     .container-text .section-text {
         width: 100%;
     }

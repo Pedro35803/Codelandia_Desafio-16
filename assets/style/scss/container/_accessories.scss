@@ -1,0 +1,35 @@
+.accessories {
+    @extend .flex-between;
+    flex-direction: column;
+    padding: 4.8rem 0 8.2rem;
+    gap: 3.2rem;
+
+    .accessories-header {
+        text-align: center;
+        width: 47.7rem;
+    }
+
+    .container-accessories {
+        @extend .flex-between;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 3.2rem;
+
+        .accessories-item {
+            @extend .flex-column;
+            text-align: center;
+            width: 100%;
+            max-width: 20rem;
+
+            .img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: $win-mobile) {
+    .accessories .container-accessories {
+        justify-content: space-around;
+    }
+}
