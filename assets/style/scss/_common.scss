@@ -1,18 +1,17 @@
-.flex-between {
+.flex {
     display: flex;
     align-items: center;
+}
+
+.flex-between {
+    @extend .flex;
     justify-content: space-between;
 }
 
-.flex-around {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 .flex-column {
-    display: flex;
+    @extend .flex;
+    // display: flex;
+    // align-items: center;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -20,11 +19,11 @@
 .container {
     height: 100%;
     margin: auto;
-    width: MIN(90%, 1150px);
+    width: MIN(90%, 115rem);
 }
 
 .logo {
-    @extend .flex-between;
+    @extend .flex;
     font-weight: 400;
     gap: 1.2rem;
 
