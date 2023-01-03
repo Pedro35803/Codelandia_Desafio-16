@@ -19,5 +19,85 @@
                 }
             }
         }
+
+        .menu-hamburgue {
+            display: none;
+            width: 2.4rem;
+            cursor: pointer;
+            z-index: 2;
+
+            &:hover {
+                filter: invert(33%) sepia(2%) 
+                    saturate(68%) hue-rotate(314deg)
+                    brightness(83%) contrast(93%);
+            }
+        }
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(130px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@media (max-width: $win-mobile) {
+    .main {
+        margin-top: 5rem;
+    }
+
+    .nav {
+        position: fixed;
+        width: 100vw;
+        z-index: 2;
+        top: 0;
+
+        .container-nav {
+            .menu {
+                background: $color-primary;
+                box-shadow: -3px 0px 11px 13px rgba(0, 0, 0, 0.4);
+                
+                height: 100%;
+                width: 50vw;
+                
+                position: fixed;
+                top: 0;
+                right: 0;
+
+                display: grid;
+                place-items: center;
+                
+                z-index: 1;
+                transform: translateX(110%);
+                transition: transform 0.5s ease;
+
+                .menu-links {
+                    height: 70%;
+                    z-index: 1;
+                    
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    li {
+                        opacity: 0;
+                    }
+                }
+
+                &.active {
+                    transform: translateX(0);
+                }
+            }
+            
+            .menu-hamburgue {
+                display: block;
+            }
+        }
     }
 }
