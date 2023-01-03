@@ -17,6 +17,7 @@ $font: (
     normal: (
         500: "Poppins-Regular.ttf",
         600: "Poppins-Medium.ttf",
+        700: "Poppins-SemiBold.ttf",
     ),
     italic: ( 700: "Poppins-SemiBoldItalic.ttf" )
 );
@@ -33,7 +34,7 @@ $font: (
 }
 
 $size-fonts: (
-    "html": 10px,
+    // "html": 10px,
     "p, a, button, input": 1.6rem, 
     "input::placeholder": 1.6rem,
     "h1": 3.2rem, "h2": 2.4rem
@@ -50,9 +51,9 @@ $win-mobile: 650px;
 
 $reponsive-size-root: (
     1440px: 9px,
-    1024px: 8px,
-    $win-tablet: 7px,
-    $win-mobile: 6px,
+    1024px: 8.5px,
+    $win-tablet: 8px,
+    $win-mobile: 7.5px,
 );
 
 @each $root-size, $size in $reponsive-size-root {

@@ -13,7 +13,7 @@
         @extend .flex-between;
         flex-wrap: wrap;
         width: 100%;
-        gap: 3.2rem;
+        gap: 3.2rem 4rem;
 
         .accessories-item {
             @extend .flex-column;
@@ -22,14 +22,39 @@
             width: 20rem;
 
             .img {
-                width: 20rem;
+                max-width: 20rem;
+                width: 100%;
+            }
+
+            .paragraph {
+                color: $color-quartetary;
             }
         }
     }
 }
 
 @media (max-width: $win-mobile) {
-    .accessories .container-accessories {
-        justify-content: space-around;
+    .accessories {
+        .accessories-header .title {
+            margin-bottom: 2rem;
+        }
+
+        .container-accessories {
+            justify-content: space-around;
+    
+            .accessories-item {
+                .img {
+                    max-width: 15rem;
+                }
+
+                // .subtitle {
+                //     font-size: 1.4rem;
+                // }
+
+                // .paragraph {
+                //     font-size: 1.2rem;
+                // }
+            }
+        }
     }
 }
