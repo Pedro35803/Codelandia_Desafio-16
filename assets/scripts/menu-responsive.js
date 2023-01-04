@@ -9,7 +9,7 @@ const controlAnimate = () => {
             link.style.animation = "";
         } else {
             const calcTempEntry = index / 6 + 0.3;
-            link.style.animation = `navLinkFade 0.5s ease forwards ${calcTempEntry}s`;
+            link.style.animation = `tracking-in-expand-fwd 0.5s ease forwards ${calcTempEntry}s`;
         }
     });
 }
