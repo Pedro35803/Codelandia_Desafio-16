@@ -33,27 +33,21 @@
     }
 }
 
+@media (max-width: $win-tablet) {
+    .accessories .container-accessories {
+        justify-content: space-around;
+    }
+}
+
 @media (max-width: $win-mobile) {
     .accessories {
         .accessories-header .title {
             margin-bottom: 2rem;
         }
 
-        .container-accessories {
-            justify-content: space-around;
-    
-            .accessories-item {
-                .img {
-                    max-width: 15rem;
-                }
-
-                // .subtitle {
-                //     font-size: 1.4rem;
-                // }
-
-                // .paragraph {
-                //     font-size: 1.2rem;
-                // }
+        .container-accessories .accessories-item {
+            .img {
+                max-width: 15rem;
             }
         }
     }

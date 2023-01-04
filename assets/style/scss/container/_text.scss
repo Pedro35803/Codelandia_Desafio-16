@@ -9,6 +9,7 @@
 
 .container-text {
     @extend .flex-between;
+    gap: 1rem;
 
     .section-text {
         @extend .flex-column;
