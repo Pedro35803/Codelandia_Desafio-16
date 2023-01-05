@@ -6,14 +6,15 @@
 
     .accessories-header {
         text-align: center;
-        width: 47.7rem;
+        max-width: 47.7rem;
+        width: 100%;
     }
 
     .container-accessories {
         @extend .flex-between;
+        gap: 3.2rem 4rem;
         flex-wrap: wrap;
         width: 100%;
-        gap: 3.2rem 4rem;
 
         .accessories-item {
             @extend .flex-column;

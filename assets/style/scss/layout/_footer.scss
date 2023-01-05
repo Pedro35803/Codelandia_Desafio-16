@@ -3,6 +3,7 @@
  
     .container-footer {
         @extend .flex-between;
+        gap: 1rem;
 
         .section-icon {
             @extend .flex-between;
@@ -30,16 +31,26 @@
     }
 }
 
-@media (max-width: ($win-mobile - 200px)) {
-    .footer .container-footer {
-        justify-content: center;
+@media (max-width: $win-mobile-small) {
+    .footer {
+        padding: 1.5rem;
 
-        .logo {
-            display: none;
-        }
+        .container-footer {
+            justify-content: center;
 
-        .section-icon {
-            width: 100%;
+            .logo {
+                display: none;
+            }
+
+            .section-icon {
+                width: 100%;
+            }
         }
+    }
+}
+
+@media (max-width: ($win-mobile-small - 100)) {
+    .footer {
+        padding: 1.5rem 0;
     }
 }

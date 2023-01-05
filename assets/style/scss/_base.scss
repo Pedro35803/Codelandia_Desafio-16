@@ -34,7 +34,7 @@ $font: (
 }
 
 $size-fonts: (
-    // "html": 10px,
+    "html": 10px,
     "p, a, button, input": 1.6rem, 
     "input::placeholder": 1.6rem,
     "h1": 3.2rem, "h2": 2.4rem
@@ -48,12 +48,12 @@ $size-fonts: (
 
 $win-tablet: 768px;
 $win-mobile: 650px;
+$win-mobile-small: $win-mobile - 200px;
 
 $reponsive-size-root: (
     1440px: 9px,
     1024px: 8.5px,
-    $win-tablet: 8px,
-    $win-mobile: 7.5px,
+    $win-tablet: 8px
 );
 
 @each $root-size, $size in $reponsive-size-root {

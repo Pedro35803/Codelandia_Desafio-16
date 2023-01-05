@@ -35,7 +35,7 @@
     }
 }
 
-@media (max-width: $win-mobile) {
+@media (max-width: ($win-mobile - 75)) {
     .main {
         margin-top: 5rem;
     }
@@ -77,6 +77,10 @@
                     li {
                         opacity: 0;
                     }
+
+                    .link {
+                        font-size: 1.8rem;
+                    }
                 }
 
                 &.active {
@@ -88,5 +92,11 @@
                 display: block;
             }
         }
+    }
+}
+
+@media (max-width: ($win-mobile-small)) {
+    .nav .container-nav .menu {
+        width: 75vw;
     }
 }
