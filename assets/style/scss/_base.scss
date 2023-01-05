@@ -14,22 +14,16 @@ $color-white: #F9F9F9;
 }
 
 $font: (
-    normal: (
-        500: "Poppins-Regular.ttf",
-        600: "Poppins-Medium.ttf",
-        700: "Poppins-SemiBold.ttf",
-    ),
-    italic: ( 700: "Poppins-SemiBoldItalic.ttf" )
+    500: "Poppins-Regular.ttf",
+    600: "Poppins-Medium.ttf",
+    700: "Poppins-SemiBold.ttf",
 );
 
-@each $font-type, $list-font in $font {
-    @each $num, $nameArq in $list-font {
-        @font-face {
-            font-family: "Poopins";
-            src: url("../font/#{$nameArq}");
-            font-style: $font-type;
-            font-weight: $num;
-        }
+@each $num, $nameArq in $font {
+    @font-face {
+        font-family: "Poopins";
+        src: url("../font/#{$nameArq}");
+        font-weight: $num;
     }
 }
 
